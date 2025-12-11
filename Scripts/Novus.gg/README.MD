@@ -1,4 +1,4 @@
-# loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Loader/Loader.lua"))()
+#### loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Loader/Loader.lua"))()
 
 Supported Games:
 #### Arsenal (https://www.roblox.com/games/286090429/Arsenal)
