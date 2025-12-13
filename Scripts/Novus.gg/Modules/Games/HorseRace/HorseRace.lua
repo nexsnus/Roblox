@@ -14,10 +14,10 @@ local hrmatawft = hrmat:CreateToggle({
         if state then
             while autoWinsFarmActive do
                 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.5.1"].knit.Services.RandomPotionService.RE.BuyPotionEvent:FireServer(table.unpack({
-                     = -9e60,
-                     = {},
-                     = true,
-                     = "hax",
+                    [1] = -9e60,
+                    [2] = {},
+                    [3] = true,
+                    [4] = "hax",
                 }))
                 wait(0.05)  
             end
