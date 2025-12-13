@@ -60,5 +60,6 @@ elseif game.PlaceId == 93787311916283 then --HorseRace
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/HorseRace/HorseRace.lua"))()   
 end
 
+repeat task.wait() until _G.Window
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/AntiAFK/AntiAFK.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/AutoClicker/AutoClicker.lua"))()
