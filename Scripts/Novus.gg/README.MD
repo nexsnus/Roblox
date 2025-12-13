@@ -7,3 +7,4 @@
 #### [ClickerSimulatorX] (https://www.roblox.com/games/120575147399256/Clicker-Simulator-X)
 #### [SpeedRunSimulator] (https://www.roblox.com/games/5293755937/Speed-Run-Simulator)
 #### [TaxiBoss] (https://www.roblox.com/games/7305309231/Taxi-Boss)
+#### [HorseRace] (https://www.roblox.com/games/93787311916283/Horse-Race)
