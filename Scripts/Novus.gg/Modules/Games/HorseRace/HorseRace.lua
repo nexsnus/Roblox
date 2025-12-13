@@ -7,7 +7,6 @@ local hrmatawft = hrmat:CreateToggle({
     Flag = "hrmatawft",
     Callback = function(state)
         while state do
-          for i = 1, 10 do
             game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.5.1"].knit.Services.RandomPotionService.RE.BuyPotionEvent:FireServer(table.unpack({
               [1] = -9e60,
               [2] = {
@@ -16,7 +15,6 @@ local hrmatawft = hrmat:CreateToggle({
               [4] = "hax",
             }))
             wait()
-          end
         end
     end,
 })   
@@ -27,10 +25,8 @@ local hrmatart = hrmat:CreateToggle({
     Flag = "hrmatart",
     Callback = function(state)
         while state do
-          for i = 1, 10 do
             game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.5.1"].knit.Services.RebirthService.RF.Rebirth:InvokeServer()
             wait()
-          end
         end
     end,
 })   
@@ -41,10 +37,8 @@ local hrmatasrt = hrmat:CreateToggle({
     Flag = "hrmatasrt",
     Callback = function(state)
         while state do
-          for i = 1, 10 do
             game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.5.1"].knit.Services.RebirthService.RF.SuperRebirth:InvokeServer()
             wait()
-          end
         end
     end,
 })   
