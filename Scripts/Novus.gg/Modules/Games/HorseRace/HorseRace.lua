@@ -15,6 +15,7 @@ local hrmatawft = hrmat:CreateToggle({
               [3] = true,
               [4] = "hax",
             }))
+            wait()
           end
         end
     end,
@@ -28,6 +29,7 @@ local hrmatart = hrmat:CreateToggle({
         while state do
           for i = 1, 10 do
             game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.5.1"].knit.Services.RebirthService.RF.Rebirth:InvokeServer()
+            wait()
           end
         end
     end,
@@ -41,6 +43,7 @@ local hrmatasrt = hrmat:CreateToggle({
         while state do
           for i = 1, 10 do
             game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.5.1"].knit.Services.RebirthService.RF.SuperRebirth:InvokeServer()
+            wait()
           end
         end
     end,
