@@ -55,6 +55,9 @@ elseif game.PlaceId == 5293755937 then --SpeedRunSimulator
 elseif game.PlaceId == 120575147399256 then --ClickerSimulatorX
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/ClickerSimulatorX/ClickerSimulatorX.lua"))()   
+elseif game.PlaceId == 93787311916283 then --HorseRace
+   repeat task.wait() until _G.Window
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/HorseRace/HorseRace.lua"))()   
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/AntiAFK/AntiAFK.lua"))()
