@@ -3,6 +3,7 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local banane = workspace.Gameplay.Dynamic.Bosses
 local currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.mainLobby_island.Systems.EggStand_1.EggStand.ProximityAll
+local autohatchrunning = false
 
 local Window = _G.Window
 local csxmat = Window:CreateTab("Automation", "home")
@@ -34,29 +35,32 @@ local csxmatakbt = csxmat:CreateToggle({
 local csxmet = Window:CreateTab("Eggs", "egg")
 
 local csxmetaht = csxmet:CreateToggle({
-        Name = "Autohatch selected Egg",
+        Name = "Autohatch",
         CurrentValue = false,
         Flag = "csxmetaht",
         Callback = function(state)
             if state then
                 currentSelectedEgg.MaxActivationDistance = 10000000000
-                CurrentSelectedEgg.KeyboardKeyCode = "KeypardNine"
+                currentSelectedEgg.KeyboardKeyCode = Enum.KeyCode.KeypadNine
+                autohatchrunning = true
             else
                 currentSelectedEgg.MaxActivationDistance = 10
-                CurrentSelectedEgg.KeyboardKeyCode = "R"
+                currentSelectedEgg.KeyboardKeyCode = Enum.KeyCode.R
+                autohatchrunning = false
             end
-            while state do 
+            while autohatchrunning == true do 
                 fireproximityprompt(currentSelectedEgg)
             end
         end,
 })
 local csxmetesd = csxmet:CreateDropdown({
-   Name = "Slected Egg",
+   Name = "Selected Egg",
    Options = {"Basic Egg","Shroom Egg","Flower Egg","Nature Egg","Leafy Egg","Cactus Egg","Rocks Egg","Magma Egg","Dragon Egg","Sponge Egg","Fishtank Egg","Ice Egg","Snowman Egg","Cloud Egg","Sky Egg","Robotic Egg","Galaxy Egg","Christmas Present Egg","Christmas Snowball Egg","Christmas Ornament Egg"},
    CurrentOption = {"Basic Egg"},
    MultipleOptions = false,
    Flag = "csxmetesd",
-   Callback = function(Option)
+   Callback = function(Options)
+            local Option = Options[1]
             if Option == "Basic Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.mainLobby_island.Systems.EggStand_1.EggStand.ProximityAll
             elseif Option == "Shroom Egg" then
@@ -97,6 +101,11 @@ local csxmetesd = csxmet:CreateDropdown({
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.limitedChristmas_island.Systems.EggStand_2.EggStand.ProximityAll
             elseif Option == "Christmas Ornament Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.limitedChristmas_island.Systems.EggStand_3.EggStand.ProximityAll
+            end
+            if autohatchrunning == true then
+                autohatchrunning = false
+                wait(0.1)
+                autohatchrunning = true
             end
    end,
 })
