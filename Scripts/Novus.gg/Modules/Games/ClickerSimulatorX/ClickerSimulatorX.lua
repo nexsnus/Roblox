@@ -33,7 +33,7 @@ local csxmatakbt = csxmat:CreateToggle({
 
 local csxmet = Window:CreateTab("Eggs", "egg")
 
-local csxmetaht = csxmmt:CreateToggle({
+local csxmetaht = csxmet:CreateToggle({
         Name = "Autohatch selected Egg",
         CurrentValue = false,
         Flag = "csxmetaht",
