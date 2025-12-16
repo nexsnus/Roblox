@@ -57,45 +57,45 @@ local csxmetesd = cxsmet:CreateDropdown({
    MultipleOptions = false,
    Flag = "csxmetesd",
    Callback = function(Option)
-            if Option = "Basic Egg" then
+            if Option == "Basic Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.mainLobby_island.Systems.EggStand_1.EggStand.ProximityAll
-            elseif Option = "Shroom Egg" then
+            elseif Option == "Shroom Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.mainLobby_island.Systems.EggStand_2.EggStand.ProximityAll
-            elseif Option = "Flower Egg" then
+            elseif Option == "Flower Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.mainLobby_island.Systems.EggStand_3.EggStand.ProximityAll
-            elseif Option = "Nature Egg" then
+            elseif Option == "Nature Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.nature_island.Systems.EggStand_1.EggStand.ProximityAll
-            elseif Option = "Leafy Egg" then
+            elseif Option == "Leafy Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.nature_island.Systems.EggStand_2.EggStand.ProximityAll
-            elseif Option = "Cactus Egg" then
+            elseif Option == "Cactus Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.desert_island.Systems.EggStand_Cactus.EggStand.ProximityAll
-            elseif Option = "Rocks Egg" then
+            elseif Option == "Rocks Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.desert_island.Systems.EggStand_Rocks.EggStand.ProximityAll
-            elseif Option = "Magma Egg" then
+            elseif Option == "Magma Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.volcano_island.Systems.EggStand_Magma.EggStand.ProximityAll
-            elseif Option = "Dragon Egg" then
+            elseif Option == "Dragon Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.volcano_island.Systems.EggStand_Dragon.EggStand.ProximityAll
-            elseif Option = "Sponge Egg" then
+            elseif Option == "Sponge Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.water_island.Systems.EggStand_Sponge.EggStand.ProximityAll
-            elseif Option = "Fishtank Egg" then
+            elseif Option == "Fishtank Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.water_island.Systems.EggStand_FishTank.EggStand.ProximityAll
-            elseif Option = "Ice Egg" then
+            elseif Option == "Ice Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.ice_island.Systems.EggStand_Ice.EggStand.ProximityAll
-            elseif Option = "Snowman Egg" then
+            elseif Option == "Snowman Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.ice_island.Systems.EggStand_Snowman.EggStand.ProximityAll
-            elseif Option = "Cloud Egg" then
+            elseif Option == "Cloud Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.cloud_island.Systems.EggStand_Cloud.EggStand.ProximityAll
-            elseif Option = "Sky Egg" then
+            elseif Option == "Sky Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.cloud_island.Systems.EggStand_Sky.EggStand.ProximityAll
-            elseif Option = "Robotic Egg" then
+            elseif Option == "Robotic Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.cosmic_island.Systems.EggStand_Robotic.EggStand.ProximityAll
-            elseif Option = "Galaxy Egg" then
+            elseif Option == "Galaxy Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.cosmic_island.Systems.EggStand_Galaxy.EggStand.ProximityAll
-            elseif Option = "Christmas Present Egg" then
+            elseif Option == "Christmas Present Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.limitedChristmas_island.Systems.EggStand_1.EggStand.ProximityAll
-            elseif Option = "Christmas Snowball Egg" then
+            elseif Option == "Christmas Snowball Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.limitedChristmas_island.Systems.EggStand_2.EggStand.ProximityAll
-            elseif Option = "Christmas Ornament Egg" then
+            elseif Option == "Christmas Ornament Egg" then
                 currentSelectedEgg = workspace.LoadedWorld.start_world.Islands.limitedChristmas_island.Systems.EggStand_3.EggStand.ProximityAll
             end
    end,
