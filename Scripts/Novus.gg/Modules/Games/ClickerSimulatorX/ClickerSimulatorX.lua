@@ -51,7 +51,7 @@ local csxmetaht = csxmet:CreateToggle({
         end,
 })
 local csxmetesd = cxsmet:CreateDropdown({
-   Name = "Dropdown Example",
+   Name = "Slected Egg",
    Options = {"Basic Egg","Shroom Egg","Flower Egg","Nature Egg","Leafy Egg","Cactus Egg","Rocks Egg","Magma Egg","Dragon Egg","Sponge Egg","Fishtank Egg","Ice Egg","Snowman Egg","Cloud Egg","Sky Egg","Robotic Egg","Galaxy Egg","Christmas Present Egg","Christmas Snowball Egg","Christmas Ornament Egg"},
    CurrentOption = {"Basic Egg"},
    MultipleOptions = false,
