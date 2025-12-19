@@ -73,3 +73,37 @@ if weihnachten == true then
         end)
     end
 end
+
+local cvstapunt = cvstatm:CreateToggle({
+    Name = "Auto Pickup Nitro",
+    CurrentValue = false,
+    Flag = "cvstapunt",
+    Callback = function(state)
+        local autopickupnitro = state
+          if state then
+            autopickupnitros()
+          end
+    end,
+})
+function autopickupnitros()
+    spawn(function()
+        autopickupnitro = true
+        while autopickupnitro do
+            wait()
+            pcall(function()
+                local n9, n10, n11 = pairs(workspace.Collectables:GetDescendants())
+                while true do
+                    local n12
+                    n11, n12 = n9(n10, n11)
+                    if n11 == nil then
+                        break
+                    end
+                    if n12:IsA("TouchTransmitter") and n12.Parent.Parent.Name == "Nitro" then
+                        n12.Parent.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                    end
+                end
+                wait()
+            end)
+        end
+    end)
+end
