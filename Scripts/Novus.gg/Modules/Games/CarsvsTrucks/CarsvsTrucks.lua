@@ -17,7 +17,6 @@ local cvstacft = cvstatm:CreateToggle({
 })
 function autocoinsfarm()
     spawn(function()
-        autocoinfarm = true
         while autocoinfarm do
             wait()
             pcall(function()
@@ -52,7 +51,6 @@ if weihnachten == true then
     })
     function autocandycanesfarm()
         spawn(function()
-            autocandycanefarm = true
             while autocandycanefarm do
                 wait()
                 pcall(function()
@@ -87,7 +85,6 @@ local cvstapunt = cvstatm:CreateToggle({
 })
 function autopickupnitros()
     spawn(function()
-        autopickupnitro = true
         while autopickupnitro do
             wait()
             pcall(function()
