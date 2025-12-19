@@ -63,7 +63,7 @@ if weihnachten == true then
                         if n7 == nil then
                             break
                         end
-                        if n8:IsA("TouchTransmitter") and n8.Parent.Parent.Name == "Candycane" then
+                        if n8:IsA("TouchTransmitter") and n8.Parent.Parent.Name == "CandyCane" then
                             n8.Parent.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                         end
                     end
