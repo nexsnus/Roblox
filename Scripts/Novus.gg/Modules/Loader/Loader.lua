@@ -58,6 +58,9 @@ elseif game.PlaceId == 120575147399256 then --ClickerSimulatorX
 elseif game.PlaceId == 93787311916283 then --HorseRace
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/HorseRace/HorseRace.lua"))()   
+elseif game.PlaceId == 120546894379169 then --CarsvsTrucks
+   repeat task.wait() until _G.Window
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/CarsvsTrucks/CarsvsTrucks.lua"))()
 end
 
 repeat task.wait() until _G.Window
