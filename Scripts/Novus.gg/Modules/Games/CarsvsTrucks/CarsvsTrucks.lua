@@ -4,12 +4,16 @@ local Window = _G.Window
 
 local cvstatm = Window:CreateTab("Automation", "home")
 
+local autocoinfarm = false
+local autocandycanefarm = false
+local autopickupnitro = false
+
 local cvstacft = cvstatm:CreateToggle({
     Name = "Auto Farm Coins",
     CurrentValue = false,
     Flag = "cvstacft",
     Callback = function(state)
-        local autocoinfarm = state
+        autocoinfarm = state
           if state then
             autocoinsfarm()
           end
@@ -43,7 +47,7 @@ if weihnachten == true then
         CurrentValue = false,
         Flag = "cvstaccft",
         Callback = function(state)
-            local autocandycanefarm = state
+            autocandycanefarm = state
               if state then
                 autocandycanesfarm()
               end
@@ -77,7 +81,7 @@ local cvstapunt = cvstatm:CreateToggle({
     CurrentValue = false,
     Flag = "cvstapunt",
     Callback = function(state)
-        local autopickupnitro = state
+        autopickupnitro = state
           if state then
             autopickupnitros()
           end
