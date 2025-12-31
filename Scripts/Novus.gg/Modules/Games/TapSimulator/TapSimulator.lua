@@ -42,7 +42,7 @@ function autoclaimrankrewards()
 
                 if targetFolder and targetFolder:FindFirstChild("Functions") then
                     local functionsFolder = targetFolder.Functions
-                    local remoteFunction = functionsFolder:GetChildren()[84]
+                    local remoteFunction = functionsFolder:GetChildren()[12]
                     if remoteFunction then
                         remoteFunction:InvokeServer()
                     end
