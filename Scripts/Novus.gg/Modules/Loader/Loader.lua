@@ -70,3 +70,4 @@ repeat task.wait() until _G.Window
 _G.ut = _G.Window:CreateTab("Universal", "infinity")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/AntiAFK/AntiAFK.lua"))() --AnitAFK
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/AutoClicker/AutoClicker.lua"))() --AutoClicker
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/FPS/LowGraphicsMode/LowGraphicsMode.lua"))() --LowGraphicsMode
