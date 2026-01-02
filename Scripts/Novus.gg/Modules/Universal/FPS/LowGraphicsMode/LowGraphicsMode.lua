@@ -1,12 +1,14 @@
 local Window = _G.Window
 local ut = _G.ut
 
+local Terrain = workspace:FindFirstChildWhichIsA("Terrain")
+local Lighting = game:GetService("Lighting")
+local RunService = game:GetService("RunService")
+
 local utfpss = ut:CreateSection("FPS")
 local utlgmb = ut:CreateButton({
     Name = "Low Graphics Mode",
     Callback = function()
-        local Terrain = workspace:FindFirstChildWhichIsA("Terrain")
-		local Lighting = game:GetService("Lighting")
       	Terrain.WaterWaveSize = 0
       	Terrain.WaterWaveSpeed = 0
       	Terrain.WaterReflectance = 0
