@@ -4,11 +4,10 @@ local ut = _G.ut
 local antiAfkEnabled = false
 local antiAfkConnection
 
-local utaafks = ut:CreateSection("AntiAFK")
-local utaafkt = ut:CreateToggle({
+local utaafks = ut:Section({ Side = "Left" })
+local utaafkt = utaafks:Toggle({
     Name = "Anti Afk",
-    CurrentValue = false,
-    Flag = "utaafkt",
+    Default = false,
     Callback = function()
         if not antiAfkEnabled then
             antiAfkEnabled = true
@@ -25,4 +24,4 @@ local utaafkt = ut:CreateToggle({
             end
         end
     end,
-})
+}, "utaafkt")
