@@ -14,12 +14,11 @@ local interval = 1
 local clickThread = nil
 local mouseDownConnection = nil
 
-local utacs = ut:CreateSection("Auto Clicker")
+local utacs = ut:Section({ Side = "Right" })
 
-local utact = ut:CreateToggle({
+local utact = utacs:Toggle({
     Name = "Auto Clicker",
-    CurrentValue = false,
-    Flag = "utact",
+    Default = false,
     Callback = function(state)
         Enabled = state
         if clickThread then
@@ -37,34 +36,33 @@ local utact = ut:CreateToggle({
             end)
         end
     end,
-})
+}, "utact")
 
-local utacis = ut:CreateSlider({
+local utacis = utacs:Slider({
     Name = "Auto Clicker Interval",
-    Range = {0.01, 2},
-    Increment = 0.01,
-    Suffix = "Seconds",
+    Default = 1,
+    Minimum = 0.01,
+    DisplayMethod = "Seconds",
     CurrentValue = 1,
-    Flag = "utacis",
     Callback = function(value)
         interval = value
     end,
-})
+}, "utacis")
 
-local utactb = ut:CreateKeybind({
+local utactb = utacs:Keybind({
     Name = "Auto Clicker Toggle Bind",
     CurrentKeybind = "L",
     HoldToInteract = false,
     Flag = "utactb",
     Callback = function()
-        utact:Set(not Enabled)
+        utact:UpdateState(not Enabled)
     end,
 })
 
-local utacxcpg = ut:CreateParagraph({Title = "Current X-Coordinate", Content = X})
-local utacycpg = ut:CreateParagraph({Title = "Current Y-Coordinate", Content = Y})
+local utacxcpg = utacs:Paragraph({ Header = "Current X-Coordinate", Body = X})
+local utacycpg = utacs:Paragraph({ Header = "Current Y-Coordinate", Body = Y})
 
-local utacpb = ut:CreateButton({
+local utacpb = utacs:Button({
     Name = "Set Position on Click",
     Callback = function()
         if mouseDownConnection then
