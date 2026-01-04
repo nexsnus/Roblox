@@ -1,7 +1,7 @@
 repeat wait() until game:IsLoaded()
 local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 _G.Maclib = loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/ui-libs/Maclib/source.lua"))()
-_G.Window = _G.Maclib:CreateWindow({
+_G.Window = _G.Maclib:Window({
    Title = "Novus.gg",
    Subtitle = gameName,
    Size = UDim2.fromOffset(868, 650),
