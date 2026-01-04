@@ -42,6 +42,7 @@ local utacis = utacs:Slider({
     Name = "Auto Clicker Interval",
     Default = 1,
     Minimum = 0.01,
+    Maximum = 2,
     DisplayMethod = "Seconds",
     CurrentValue = 1,
     Callback = function(value)
