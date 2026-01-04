@@ -7,9 +7,10 @@ local GuiService = game:GetService("GuiService")
 
 local Window = _G.Window
 
-local aabt = Window:CreateTab("Aiming", "crosshair")
-local avt = Window:CreateTab("Visuals", "nfc")
-local agmt = Window:CreateTab("Gun Mods", "anvil")
+local atg = Window:TabGroup()
+local aabt = atg:Tab( Name = "Aiming", Image = "rbxassetid://7733765307" )
+local avt = atg:Tab( Name = "Visuals", "nfc")
+local agmt = atg:Tab( Name = "Gun Mods", Image = )
 
 local Enabled = false
 local FOV = 50
