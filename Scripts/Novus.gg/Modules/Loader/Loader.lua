@@ -1,19 +1,42 @@
 repeat wait() until game:IsLoaded()
-local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
-_G.Maclib = loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/ui-libs/Maclib/source.lua"))()
-_G.Window = _G.Maclib:Window({
-   Title = "Novus.gg",
-   Subtitle = gameName,
-   Size = UDim2.fromOffset(868, 650),
-   DragStyle = 1,
-   DisabledWindowControls = {},
-   ShowUserInfo = true,
-   Keybind = Enum.KeyCode.K,
-   AcrylicBlur = true,
-})
-local banane = false
+_G.Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+_G.Window = _G.Rayfield:CreateWindow({
+   Name = "Novus.gg",
+   Icon = 0,
+   LoadingTitle = "Novus.gg is loading",
+   LoadingSubtitle = "by nexsnus",
+   ShowText = "Novus.gg", 
+   Theme = "Default",
 
-if banane == true then
+   ToggleUIKeybind = "K",
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false,
+
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = "Novus.gg", 
+      FileName = "Novus.gg config"
+   },
+
+   Discord = {
+      Enabled = false, 
+      Invite = "noinvitelink", 
+      RememberJoins = true
+   },
+
+   KeySystem = false, 
+   KeySettings = {
+      Title = "Novus.gg Keyguard",
+      Subtitle = nil,
+      Note = "No method of obtaining the key is provided", 
+      FileName = "Key", 
+      SaveKey = true, 
+      GrabKeyFromSite = false, 
+      Key = {"Hello"} 
+   }
+})
+
 if game.PlaceId == 7305309231 then --TaxiBoss
     repeat task.wait() until _G.Window
     loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/TaxiBoss/TaxiBoss.lua"))()
@@ -38,15 +61,13 @@ elseif game.PlaceId == 93787311916283 then --HorseRace
 elseif game.PlaceId == 120546894379169 then --CarsvsTrucks
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/CarsvsTrucks/CarsvsTrucks.lua"))()
-elseif game.PlaceId == 75992362647444 then --TapSimulator
+   elseif game.PlaceId == 75992362647444 then --TapSimulator
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/TapSimulator/TapSimulator.lua"))()
 end
-end
 
 repeat task.wait() until _G.Window
-_G.utg = _G.Window:TabGroup()
-_G.ut = _G.utg:Tab({ Name = "Universal", Image = "rbxassetid://7733964640" })
+_G.ut = _G.Window:CreateTab("Universal", "infinity")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/AntiAFK/AntiAFK.lua"))() --AnitAFK
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/AutoClicker/AutoClicker.lua"))() --AutoClicker
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Universal/FPS/LowGraphicsMode/LowGraphicsMode.lua"))() --LowGraphicsMode
