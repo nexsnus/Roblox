@@ -13,7 +13,7 @@ _G.Window = _G.Maclib:CreateWindow({
 })
 local banane = false
 
-if banane = true do
+if banane == true do
 if game.PlaceId == 7305309231 then --TaxiBoss
     repeat task.wait() until _G.Window
     loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/TaxiBoss/TaxiBoss.lua"))()
