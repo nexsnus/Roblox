@@ -61,9 +61,12 @@ elseif game.PlaceId == 93787311916283 then --HorseRace
 elseif game.PlaceId == 120546894379169 then --CarsvsTrucks
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/CarsvsTrucks/CarsvsTrucks.lua"))()
-   elseif game.PlaceId == 75992362647444 then --TapSimulator
+elseif game.PlaceId == 75992362647444 then --TapSimulator
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/TapSimulator/TapSimulator.lua"))()
+elseif game.PlaceId == 3956818381 then --NinjaLegends
+   repeat task.wait() until _G.Window
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/NinjaLegends/NinjaLegends.lua"))()
 end
 
 repeat task.wait() until _G.Window
