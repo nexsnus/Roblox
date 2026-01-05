@@ -10,3 +10,4 @@
 #### [HorseRace] (https://www.roblox.com/games/93787311916283/Horse-Race)
 #### [CarsvsTrucks] (https://www.roblox.com/games/120546894379169/Cars-vs-Trucks)
 #### [TapSimulator] (https://www.roblox.com/games/75992362647444/Tap-Simulator)
+#### [NinjaLegends] (https://www.roblox.com/games/3956818381/Ninja-Legends)
