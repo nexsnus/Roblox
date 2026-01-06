@@ -237,7 +237,7 @@ function autobuydarkskill()
     end)
 end
 
-local nlahivct = nlatm:CreateToggle({
+local nlahivct = nletm:CreateToggle({
     Name = "Auto Hatch Infinity Void Crystal",
     CurrentValue = false,
     Flag = "cvstacft",
