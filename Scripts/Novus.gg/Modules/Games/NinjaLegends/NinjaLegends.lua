@@ -28,7 +28,7 @@ local nlast = nlatm:CreateToggle({
           end
     end,
 })
-function autoswingfarm()
+function autoswing()
     spawn(function()
         while autoswingfarm do
             wait()
