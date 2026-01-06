@@ -272,7 +272,7 @@ for i,v in next, game.workspace.islandUnlockParts:GetChildren() do
 end
 local nlitd = nlttm:CreateDropdown({
    Name = "Teleport to Island",
-   Options = {Islands},
+   Options = Islands,
    CurrentOption = {},
    MultipleOptions = false,
    Flag = "", 
