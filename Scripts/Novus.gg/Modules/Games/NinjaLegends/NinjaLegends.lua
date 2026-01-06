@@ -20,7 +20,7 @@ local bestIsland = "Blazing Vortex Island"
 local nlast = nlatm:CreateToggle({
     Name = "Auto Swing",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlast",
     Callback = function(state)
         autoswingfarm = state
           if state then
@@ -50,7 +50,7 @@ end
 local nlaset = nlatm:CreateToggle({
     Name = "Auto Sell",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlaset",
     Callback = function(state)
         autosellfarm = state
           if state then
@@ -75,7 +75,7 @@ end
 local nlabst = nlatm:CreateToggle({
     Name = "Auto Buy Swords",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlabst",
     Callback = function(state)
         autobuyswordfarm = state
           if state then
@@ -99,7 +99,7 @@ end
 local nlabbt = nlatm:CreateToggle({
     Name = "Auto Buy Belts",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlabbt",
     Callback = function(state)
         autobuybeltfarm = state
           if state then
@@ -123,7 +123,7 @@ end
 local nlabskt = nlatm:CreateToggle({
     Name = "Auto Buy Skills",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlabskt",
     Callback = function(state)
         autobuyskillfarm = state
           if state then
@@ -147,7 +147,7 @@ end
 local nlabrt = nlatm:CreateToggle({
     Name = "Auto Buy Ranks",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlabrt",
     Callback = function(state)
         autobuyrankfarm = state
           if state then
@@ -164,13 +164,17 @@ function autobuyrank()
 				local ownedRanks = game:GetService("Players").LocalPlayer:WaitForChild("ownedRanks"):GetChildren()
 				local eventName = "buyRank"
 				for _, rank in pairs(ranks) do
-					for _, ownedRank in pairs(ownedRanks) do
-						if ownedRank.Name == rank.Name then 
-							break 
-						end
-					end
-					ninjaEvent:FireServer(eventName, rank.Name)
-					wait(1)
+   				 local owned = false
+  				  for _, ownedRank in pairs(ownedRanks) do
+     				   if ownedRank.Name == rank.Name then
+          				  owned = true
+           				 break
+      				  end
+  				  end
+   				 if not owned then
+    				    ninjaEvent:FireServer("buyRank", rank.Name)
+     				   wait(1)
+   				 end
 				end
             end)
         end
@@ -191,7 +195,7 @@ end
 local nlablst = nlatm:CreateToggle({
     Name = "Auto Buy Light Skills",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlablst",
     Callback = function(state)
         autobuylightskillfarm = state
           if state then
@@ -215,7 +219,7 @@ end
 local nlabdst = nlatm:CreateToggle({
     Name = "Auto Buy Dark Skills",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlabdst",
     Callback = function(state)
         autobuydarkskillfarm = state
           if state then
@@ -240,7 +244,7 @@ end
 local nlahivct = nletm:CreateToggle({
     Name = "Auto Hatch Infinity Void Crystal",
     CurrentValue = false,
-    Flag = "cvstacft",
+    Flag = "nlahivct",
     Callback = function(state)
         autohatchinfinityvoidcrystalfarm = state
           if state then
@@ -275,7 +279,7 @@ local nlitd = nlttm:CreateDropdown({
    Options = Islands,
    CurrentOption = {},
    MultipleOptions = false,
-   Flag = "", 
+   Flag = "nlitd", 
    Callback = function(Option)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.islandUnlockParts[Option].islandSignPart.CFrame
    end,
@@ -323,7 +327,7 @@ local nllitd = nlttm:CreateDropdown({
    Options = lightIslandsNames,
    CurrentOption = {},
    MultipleOptions = false,
-   Flag = "", 
+   Flag = "nllitd", 
    Callback = function(Option)
 		tpToKarmaIsland(lightIslands, Option)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x, y ,z)
@@ -337,7 +341,7 @@ local nlditd = nlttm:CreateDropdown({
    Options = darkIslandsNames,
    CurrentOption = {},
    MultipleOptions = false,
-   Flag = "", 
+   Flag = "nlditd", 
    Callback = function(Option)
 		tpToKarmaIsland(darkIslands, Option)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x, y ,z)
