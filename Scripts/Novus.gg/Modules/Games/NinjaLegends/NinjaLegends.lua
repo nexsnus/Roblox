@@ -418,21 +418,25 @@ local nlgaeb = nlmtm:CreateButton({
 		getElements()
    end,
 })
-
---	local nlgigacb = nlmtm:CreateButton({
- --	  Name = "Get Infinite Gems/Coins",
- -- 	 	Callback = function()
---			if wt == true then
---					break
-	--			else
-		--			if game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
-    		--		game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", 1e+124)
-				--	else
-					--	game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", - math.huge)
-						--getElements()
-					--end
-				--end
-				--wt = true
-				--wait(5)
-  	 	--end,
-	--})
+local folder = game.Players.LocalPlayer.ownedElements
+local count = #folder:GetChildren()
+if count =~ 9 or game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
+	local nlgigacb = nlmtm:CreateButton({
+ 	  Name = "Get Infinite Gems/Coins",
+  	 	Callback = function()
+			if wt == true then
+					break
+				else
+					if game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
+    					game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", 1e+124)
+					else
+						game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", - math.huge)
+						getElements()
+					end
+				end
+				wt = true
+				wait(5)
+				wt = false
+  	 	end,
+	})
+end
