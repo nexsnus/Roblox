@@ -320,7 +320,7 @@ local function tpToKarmaIsland(fromTable, islandName)
 end
 local nllitd = nlttm:CreateDropdown({
    Name = "Teleport to Light Island",
-   Options = {lightIslandsNames},
+   Options = lightIslandsNames,
    CurrentOption = {},
    MultipleOptions = false,
    Flag = "", 
@@ -334,7 +334,7 @@ local nllitd = nlttm:CreateDropdown({
 })
 local nlditd = nlttm:CreateDropdown({
    Name = "Teleport to Dark Island",
-   Options = {darkIslandsNames},
+   Options = darkIslandsNames,
    CurrentOption = {},
    MultipleOptions = false,
    Flag = "", 
