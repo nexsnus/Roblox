@@ -412,17 +412,11 @@ local function getElements()
        		 end)
     	end
 end
-local nlgaeb = nlmtm:CreateButton({
-   Name = "Get All Elements",
-   Callback = function()
-		getElements()
-   end,
-})
 local folder = game.Players.LocalPlayer.ownedElements
 local count = #folder:GetChildren()
 if count ~= 9 or game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
 	local nlgigacb = nlmtm:CreateButton({
- 	  Name = "Get Infinite Gems/Coins",
+ 	  Name = "Get Infinite Gems/Coins/All Elements",
   	 	Callback = function()
 			if wt ~= true then
 				if game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
