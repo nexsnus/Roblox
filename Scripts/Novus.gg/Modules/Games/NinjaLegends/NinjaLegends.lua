@@ -14,6 +14,7 @@ local autobuyrankfarm = false
 local autobuylightskillfarm = false
 local autobuydarkskillfarm = false
 local autohatchinfinityvoidcrystalfarm = false
+local wt = false
 local ninjaEvent = game:GetService("Players").LocalPlayer.ninjaEvent
 local bestIsland = "Blazing Vortex Island"
 
@@ -391,5 +392,43 @@ local nlcdkcb = nlmtm:CreateButton({
    Callback = function()
 		chestRemote:InvokeServer("Evil Karma Chest")
 		wait(3)
+   end,
+})
+
+local nlgaeb = nlmtm:CreateButton({
+   Name = "Get All Elements",
+   Callback = function()
+		for Y, k in pairs({
+       		 "Shadow Charge",
+       		 "Electral Chaos",
+       		 "Blazing Entity",
+       		 "Shadowfire",
+      		  "Lightning";
+       		 "Masterful Wrath",
+       		 "Inferno",
+       		 "Eternity Storm",
+       		 "Frost"
+   		 }) do
+       		 pcall(function()
+          		  game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer(k)
+       		 end)
+    	end
+   end,
+})
+
+local nlgigacb = nlmtm:CreateButton({
+   Name = "Collect Dark Karma Chest",
+   Callback = function()
+		if wt == true then
+				break
+			else
+				if game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
+    				game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", 1e+124)
+				else
+					game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", - math.huge)
+				end
+			end
+			wt = true
+			wait(5)
    end,
 })
