@@ -276,8 +276,8 @@ local nlitd = nlttm:CreateDropdown({
    CurrentOption = {},
    MultipleOptions = false,
    Flag = "", 
-   Callback = function(Options)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.islandUnlockParts[Options].islandSignPart.CFrame
+   Callback = function(Option)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.islandUnlockParts[Option].islandSignPart.CFrame
    end,
 })
 
@@ -324,8 +324,8 @@ local nllitd = nlttm:CreateDropdown({
    CurrentOption = {},
    MultipleOptions = false,
    Flag = "", 
-   Callback = function(Options)
-		tpToKarmaIsland(lightIslands, Options)
+   Callback = function(Option)
+		tpToKarmaIsland(lightIslands, Option)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x, y ,z)
         x = nil
         y = nil
@@ -338,8 +338,8 @@ local nlditd = nlttm:CreateDropdown({
    CurrentOption = {},
    MultipleOptions = false,
    Flag = "", 
-   Callback = function(Options)
-		tpToKarmaIsland(darkIslands, Options)
+   Callback = function(Option)
+		tpToKarmaIsland(darkIslands, Option)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x, y ,z)
         x = nil
         y = nil
