@@ -424,15 +424,12 @@ if count ~= 9 or game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeF
 	local nlgigacb = nlmtm:CreateButton({
  	  Name = "Get Infinite Gems/Coins",
   	 	Callback = function()
-			if wt == true then
-					break
+			if wt ~= true then
+				if game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
+    				game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", 1e+124)
 				else
-					if game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
-    					game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", 1e+124)
-					else
-						game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", - math.huge)
-						getElements()
-					end
+					game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", - math.huge)
+					getElements()
 				end
 				wt = true
 				wait(5)
