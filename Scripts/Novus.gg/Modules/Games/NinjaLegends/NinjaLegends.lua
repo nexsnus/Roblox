@@ -434,6 +434,7 @@ if count ~= 9 or game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeF
 				wt = true
 				wait(5)
 				wt = false
+			end
   	 	end,
 	})
 end
