@@ -395,10 +395,8 @@ local nlcdkcb = nlmtm:CreateButton({
    end,
 })
 
-local nlgaeb = nlmtm:CreateButton({
-   Name = "Get All Elements",
-   Callback = function()
-		for Y, k in pairs({
+local function getElements()
+	for Y, k in pairs({
        		 "Shadow Charge",
        		 "Electral Chaos",
        		 "Blazing Entity",
@@ -413,22 +411,28 @@ local nlgaeb = nlmtm:CreateButton({
           		  game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer(k)
        		 end)
     	end
+end
+local nlgaeb = nlmtm:CreateButton({
+   Name = "Get All Elements",
+   Callback = function()
+		getElements()
    end,
 })
 
-local nlgigacb = nlmtm:CreateButton({
-   Name = "Collect Dark Karma Chest",
-   Callback = function()
-		if wt == true then
-				break
-			else
-				if game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
-    				game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", 1e+124)
-				else
-					game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", - math.huge)
-				end
-			end
-			wt = true
-			wait(5)
-   end,
-})
+--	local nlgigacb = nlmtm:CreateButton({
+ --	  Name = "Get Infinite Gems/Coins",
+ -- 	 	Callback = function()
+--			if wt == true then
+--					break
+	--			else
+		--			if game.Players.LocalPlayer.PlayerGui.gameGui.sideButtons.excludeFolder.gemsFrame.amountLabel.Text:lower() == "inf" then
+    		--		game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", 1e+124)
+				--	else
+					--	game.ReplicatedStorage.rEvents.zenMasterEvent:FireServer("convertGems", - math.huge)
+						--getElements()
+					--end
+				--end
+				--wt = true
+				--wait(5)
+  	 	--end,
+	--})
