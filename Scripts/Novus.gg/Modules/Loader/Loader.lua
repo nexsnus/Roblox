@@ -67,6 +67,9 @@ elseif game.PlaceId == 75992362647444 then --TapSimulator
 elseif game.PlaceId == 3956818381 then --NinjaLegends
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/NinjaLegends/NinjaLegends.lua"))()
+elseif game.PlaceId == 123557829667240 then --ChopYourTree
+   repeat task.wait() until _G.Window
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/ChopYourTree/ChopYourTree.lua"))()
 end
 
 repeat task.wait() until _G.Window
