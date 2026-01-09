@@ -2,6 +2,13 @@ local Window = _G.Window
 
 local cytatm = Window:CreateTab("Automation", "home")
 
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local hrp = character:WaitForChild("HumanoidRootPart")
+local folder = workspace.Debris
+local proximityPrompt
+
 local autocollectluckyblockfarm = false
 local autochoptreefarm = false
 
@@ -21,12 +28,6 @@ function autocollectluckyblock()
         while autocollectluckyblockfarm do
             wait()
             pcall(function()
-				local Players = game:GetService("Players")
-                local player = Players.LocalPlayer
-                local character = player.Character or player.CharacterAdded:Wait()
-                local hrp = character:WaitForChild("HumanoidRootPart")
-                local folder = workspace.Debris
-                local proximityPrompt
                 for i, v in ipairs(folder:GetDescendants()) do
 	                if v:IsA("ProximityPrompt") then
 		                proximityPrompt = v
@@ -70,7 +71,9 @@ function autochoptree()
         while autochoptreefarm do
             wait()
             pcall(function()
-				game:GetService("ReplicatedStorage").Remotes.AxeSwing:FireServer()
+				if not player.Backpack:FindFirstChild("Axe") then
+					game:GetService("ReplicatedStorage").Remotes.AxeSwing:FireServer()
+				end
             end)
         end
     end)
