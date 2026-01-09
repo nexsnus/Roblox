@@ -53,7 +53,7 @@ local utacis = ut:CreateSlider({
 
 local utactb = ut:CreateKeybind({
     Name = "Auto Clicker Toggle Bind",
-    CurrentKeybind = "Unknown",
+    CurrentKeybind = "None",
     HoldToInteract = false,
     Flag = "utactb",
     Callback = function()
