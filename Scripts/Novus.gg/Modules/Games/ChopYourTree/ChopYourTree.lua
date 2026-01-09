@@ -34,7 +34,7 @@ function autocollectluckyblock()
 	                end
                 end
                 if proximityPrompt then
-                    wait(2)
+                    wait(5)
                     local newCF = proximityPrompt.Parent.CFrame
                     local oldCF = hrp.CFrame
                     hrp.CFrame = newCF
