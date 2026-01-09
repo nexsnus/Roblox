@@ -3,11 +3,12 @@ local Window = _G.Window
 local cytatm = Window:CreateTab("Automation", "home")
 
 local autocollectluckyblockfarm = false
+local autochoptreefarm = false
 
 local cytaclbt = cytatm:CreateToggle({
     Name = "Auto Collect Lucky Blocks",
     CurrentValue = false,
-    Flag = "nlast",
+    Flag = "cytaclbt",
     Callback = function(state)
         autocollectluckyblockfarm = state
           if state then
@@ -20,7 +21,7 @@ function autocollectluckyblock()
         while autocollectluckyblockfarm do
             wait()
             pcall(function()
-				        local Players = game:GetService("Players")
+				local Players = game:GetService("Players")
                 local player = Players.LocalPlayer
                 local character = player.Character or player.CharacterAdded:Wait()
                 local hrp = character:WaitForChild("HumanoidRootPart")
@@ -48,6 +49,28 @@ function autocollectluckyblock()
                         humanoid:EquipTool(tool)
                     end
                 end
+            end)
+        end
+    end)
+end
+
+local cytactt = cytatm:CreateToggle({
+    Name = "Auto Chop Tree",
+    CurrentValue = false,
+    Flag = "cytactt",
+    Callback = function(state)
+        autochoptreefarm = state
+          if state then
+            autochoptree()
+          end
+    end,
+})
+function autochoptree()
+    spawn(function()
+        while autochoptreefarm do
+            wait()
+            pcall(function()
+				game:GetService("ReplicatedStorage").Remotes.AxeSwing:FireServer()
             end)
         end
     end)
