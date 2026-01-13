@@ -23,47 +23,46 @@ end)
 local Window = _G.Window
 local tbtbaft = Window:CreateTab("Automation", "home")
 
+local automoneyfarm = false
+
 local tbaf = tbtbaft:CreateToggle({
     Name = "Auto Money",
     CurrentValue = false,
     Flag = "tbaf",
     Callback = function(state)
-        getfenv().autoMoney = state
-
-        pcall(function()
-            local activeQuests = game:GetService("Players").LocalPlayer.ActiveQuests
-            for i = 1, 2 do
-                local quest = activeQuests:FindFirstChildOfClass("StringValue")
-                if quest then
-                    game:GetService("ReplicatedStorage").Quests.Contracts.CancelContract:InvokeServer(quest.Name)
-                end
-            end
-        end)
-
-        while getfenv().autoMoney do
-            task.wait()
-
-            local player = game:GetService("Players").LocalPlayer
-            local activeQuests = player.ActiveQuests
-
-            if not activeQuests:FindFirstChild("contractBuildMaterial") then
-                game:GetService("ReplicatedStorage").Quests.Contracts.StartContract:InvokeServer("contractBuildMaterial")
-                repeat task.wait() until activeQuests:FindFirstChild("contractBuildMaterial")
-            end
-
-            repeat
-                task.spawn(function()
-                    for i = 1, 10 do
-                        game:GetService("ReplicatedStorage").Quests.DeliveryComplete:InvokeServer("contractMaterial")
-                    end
-                end)
-                task.wait()
-            until activeQuests.contractBuildMaterial.Value == "!pw5pi3ps2"
-
-            game:GetService("ReplicatedStorage").Quests.Contracts.CompleteContract:InvokeServer()
-        end
+        automoneyfarm = state
+          if state then
+            automoney()
+          end
     end,
 })
+function automoney()
+    spawn(function()
+        while automoneyfarm do
+            wait()
+            pcall(function()
+				if not game:GetService("Players").LocalPlayer.ActiveQuests:FindFirstChild('contractBuildMaterial') then
+                    pcall(function()
+                        game:GetService("ReplicatedStorage").Quests.Contracts.StartContract:InvokeServer('contractBuildMaterial')
+                    end)
+                    repeat
+                        task.wait()
+                    until game:GetService("Players").LocalPlayer.ActiveQuests:FindFirstChild('contractBuildMaterial')
+                end
+                repeat
+                    pcall(function()
+                        game:GetService("ReplicatedStorage").Quests.DeliveryComplete:InvokeServer('contractMaterial')
+                    end)
+                    task.wait()
+                until game:GetService("Players").LocalPlayer.ActiveQuests.contractBuildMaterial.Value == '!pw5pi3ps2'
+                pcall(function()
+                    game:GetService("ReplicatedStorage").Quests.Contracts.CompleteContract:InvokeServer()
+                end)
+                task.wait()
+            end)
+        end
+    end)
+end
 
 local tbac = tbtbaft:CreateToggle({
     Name = "Auto Customer",
