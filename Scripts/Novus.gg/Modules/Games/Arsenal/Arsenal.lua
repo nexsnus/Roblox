@@ -685,3 +685,4 @@ local agmtirt = agmt:CreateToggle({
                 end
             end
         end,
+})
