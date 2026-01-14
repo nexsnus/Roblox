@@ -39,18 +39,6 @@ FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.
 
 local ESPDrawings = {}
 
-
-local function BroadcastPresence()
-    if not _G.ArsenalScriptUsers then
-        _G.ArsenalScriptUsers = {}
-    end
-    _G.ArsenalScriptUsers[LocalPlayer.Name] = {
-        identifier = ScriptIdentifier,
-        timestamp = tick(),
-        player = LocalPlayer
-    }
-end
-
 local function getPlayersName()
     for _, v in pairs(game:GetChildren()) do
         if v.ClassName == "Players" then
