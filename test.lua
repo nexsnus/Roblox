@@ -1,5 +1,5 @@
 queue_on_teleport([=[
-    loadstring("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/test.lua")()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/test.lua"))()
 ]=])
 
 
