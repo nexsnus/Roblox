@@ -4,6 +4,7 @@ local mwfmat = Window:CreateTab("Automation", "home")
 local players = game:GetService("Players")
 local lp = players.LocalPlayer
 local leoistgay = lp.UserId
+local hrp = lp.Character and lp.Character:FindFirstChild("HumanoidRootPart")
 
 local plots = workspace.Map.Plots
 local lpplot
@@ -60,7 +61,7 @@ local mwfmatcmt = mwfmat:CreateToggle({
         autoCollectMoneyActive = state
         if state then
             while autoCollectMoneyActive do
-                firetouchinterest(claimmoneyti)
+                firetouchinterest(hrp, claimmoneyti.parent, 0)
 				wait(0.001) 
             end
         end
