@@ -84,6 +84,9 @@ elseif game.PlaceId == 123557829667240 then --ChopYourTree
 elseif game.PlaceId == 79267089300389 then --MyWoodFarm
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/MyWoodFarm/MyWoodFarm.lua"))()
+elseif game.PlaceId == 77922212238973 then --MogtoStealanEgg
+   repeat task.wait() until _G.Window
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/MogtoStealanEgg/MogtoStealanEgg.lua"))()
 end
 
 repeat task.wait() until _G.Window
