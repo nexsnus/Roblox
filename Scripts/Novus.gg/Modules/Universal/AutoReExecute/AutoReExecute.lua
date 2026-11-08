@@ -11,7 +11,7 @@ local utaret = ut:CreateToggle({
 					local queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 
 					if queueteleport then
-						queueteleport("loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Loader/Loader.lua"))()")
+						queueteleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Loader/Loader.lua"))()')
 					end
 				end
     end,
