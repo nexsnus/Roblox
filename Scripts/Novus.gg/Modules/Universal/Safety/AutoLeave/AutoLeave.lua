@@ -12,7 +12,6 @@ local utalt = ut:CreateToggle({
 					for i,v in pairs(game.Players:GetPlayers()) do
 						pcall(function()
 							if v:IsInGroup(GroupId) and v:GetRankInGroup(GroupId) > 1 then
-								AutoRejoin:Set(false)
 								Player:Kick("Detected Staff (Player above group rank 1)")
 							end
 						end)
