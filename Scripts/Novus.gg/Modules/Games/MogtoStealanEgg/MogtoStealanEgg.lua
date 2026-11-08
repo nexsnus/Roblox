@@ -21,6 +21,7 @@ zcf["Cosmic"] = CFrame.new(-3180, 0, 0) * CFrame.new(0, 10, 0)
 local zn = {"None", "Sub", "Cave", "Desert", "Snow", "Volcanic", "Hacked", "Abyss", "Prehistoric", "Cosmic"}
 
 
+local resetting = false
 mtsaettztd = mtsaett:CreateDropdown({
     Name = "Zone Teleports",
     Options = zn,
@@ -28,10 +29,15 @@ mtsaettztd = mtsaett:CreateDropdown({
     MultipleOptions = false,
     Flag = "mtsaettztd",
     Callback = function(Option)
-    	if hrp and Option[1] ~= "None" and zcf[Option[1]] then
+    	if resetting then return end
+        if hrp and Option[1] ~= "None" and zcf[Option[1]] then
             hrp.CFrame = zcf[Option[1]]
         end
-        mtsaettztd:Set({"None"})
+        resetting = true
+        task.defer(function()
+            mtsaettztd:Set({"None"})
+            resetting = false
+        end)
     end,
 })
 
