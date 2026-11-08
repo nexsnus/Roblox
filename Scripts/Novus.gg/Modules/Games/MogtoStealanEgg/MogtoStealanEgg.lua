@@ -29,6 +29,7 @@ mtsaettztd = mtsaett:CreateDropdown({
     Flag = "mtsaettztd",
     Callback = function(Option)
     	hrp.CFrame = zcf[Option[1]]
+        mtsaettztd:Set({})
     end,
 })
 
