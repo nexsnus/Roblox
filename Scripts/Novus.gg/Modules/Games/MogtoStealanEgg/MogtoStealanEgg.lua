@@ -18,7 +18,8 @@ zcf["Hacked"] = CFrame.new(-1713, 0, 0) * CFrame.new(0, 10, 0)
 zcf["Abyss"] = CFrame.new(-2142, 0, 0) * CFrame.new(0, 10, 0)
 zcf["Prehistoric"] = CFrame.new(-2662, 0, 0) * CFrame.new(0, 10, 0)
 zcf["Cosmic"] = CFrame.new(-3180, 0, 0) * CFrame.new(0, 10, 0)
-local zn = {"None", "Sub", "Cave", "Desert", "Snow", "Volcanic", "Hacked", "Abyss", "Prehistoric", "Cosmic"}
+zcf["Olympus"] = CFrame.new(-3748, 0, 0) * CFrame.new(0, 10, 0)
+local zn = {"None", "Sub", "Cave", "Desert", "Snow", "Volcanic", "Hacked", "Abyss", "Prehistoric", "Cosmic", "Olympus"}
 
 
 local resetting = false
