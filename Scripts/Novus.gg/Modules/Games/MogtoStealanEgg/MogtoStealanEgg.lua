@@ -18,18 +18,20 @@ zcf["Hacked"] = CFrame.new(-1713, 0, 0) * CFrame.new(0, 10, 0)
 zcf["Abyss"] = CFrame.new(-2142, 0, 0) * CFrame.new(0, 10, 0)
 zcf["Prehistoric"] = CFrame.new(-2662, 0, 0) * CFrame.new(0, 10, 0)
 zcf["Cosmic"] = CFrame.new(-3180, 0, 0) * CFrame.new(0, 10, 0)
-local zn = {"Sub", "Cave", "Desert", "Snow", "Volcanic", "Hacked", "Abyss", "Prehistoric", "Cosmic"}
+local zn = {"None", "Sub", "Cave", "Desert", "Snow", "Volcanic", "Hacked", "Abyss", "Prehistoric", "Cosmic"}
 
 
 mtsaettztd = mtsaett:CreateDropdown({
     Name = "Zone Teleports",
     Options = zn,
-    CurrentOption = {};
+    CurrentOption = {"None"};
     MultipleOptions = false,
     Flag = "mtsaettztd",
     Callback = function(Option)
-    	hrp.CFrame = zcf[Option[1]]
-        mtsaettztd:Set({})
+    	if hrp and Option[1] ~= "None" and zcf[Option[1]] then
+            hrp.CFrame = zcf[Option[1]]
+        end
+        mtsaettztd:Set({"None"})
     end,
 })
 
