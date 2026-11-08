@@ -1,4 +1,15 @@
 repeat wait() until game:IsLoaded()
+local found
+for _, t in ipairs(game:GetService("CoreGui"):GetDescendants()) do
+    if t:IsA("TextLabel") and t.Text == "Novus.gg" then
+        found = t
+        break
+    end
+end
+
+if found then
+    game:GetService("CoreGui").Rayfield:Destroy()
+end
 _G.Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 _G.Window = _G.Rayfield:CreateWindow({
    Name = "Novus.gg",
