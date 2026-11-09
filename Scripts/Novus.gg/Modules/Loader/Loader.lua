@@ -71,9 +71,9 @@ elseif game.PlaceId == 120575147399256 then --ClickerSimulatorX
 elseif game.PlaceId == 93787311916283 then --HorseRace
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/HorseRace/HorseRace.lua"))()   
-elseif game.PlaceId == 120546894379169 then --CarsvsTrucks
+elseif game.PlaceId == 120546894379169 then --CarsVSTrucks
    repeat task.wait() until _G.Window
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/CarsvsTrucks/CarsvsTrucks.lua"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/CarsVSTrucks/CarsVSTrucks.lua"))()
 elseif game.PlaceId == 75992362647444 then --TapSimulator
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/TapSimulator/TapSimulator.lua"))()
@@ -86,9 +86,9 @@ elseif game.PlaceId == 123557829667240 then --ChopYourTree
 elseif game.PlaceId == 79267089300389 then --MyWoodFarm
    repeat task.wait() until _G.Window
    loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/MyWoodFarm/MyWoodFarm.lua"))()
-elseif game.PlaceId == 77922212238973 then --MogtoStealanEgg
+elseif game.PlaceId == 77922212238973 then --MogToStealAnEgg
    repeat task.wait() until _G.Window
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/MogtoStealanEgg/MogtoStealanEgg.lua"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/nexsnus/Roblox/refs/heads/main/Scripts/Novus.gg/Modules/Games/MogToStealAnEgg/MogToStealAnEgg.lua"))()
 end
 
 repeat task.wait() until _G.Window
